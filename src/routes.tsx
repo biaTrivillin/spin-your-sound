@@ -1,10 +1,12 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "./pages/home/Home";
-import Catalog from "./pages/catalog/Ctalog";
+import Home from "./components/pages/home/Home";
+import Catalog from "./components/pages/catalog/Ctalog";
+import Header from "./components/layout/header/Header";
 
 export default function MainRoutes() {
     return (
         <BrowserRouter>
+            <Header/>
             <Routes>
                 <Route path="/" element={<Home/>}/>
                 <Route path="/catalog" element={<Catalog/>}/>
