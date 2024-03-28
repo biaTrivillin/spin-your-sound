@@ -70,5 +70,15 @@
               transform-origin: top left;
 
     }
-  }
+}
+
+@keyframes carousel{
+    0%    { left:0; }
+    29%   { left:0; }
+    33% { left:-100%; }
+    62% { left:-100%; }
+    66%   { left:-200%; }
+    95%   { left:-200%; }
+    100% { left:-0%; }
+}
   

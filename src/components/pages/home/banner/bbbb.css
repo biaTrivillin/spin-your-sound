@@ -1,0 +1,43 @@
+/* @keyframes carousel{
+    0%    { left:0; }
+    11%   { left:0; }
+    12.5% { left:-100%; }
+    23.5% { left:-100%; }
+    25%   { left:-200%; }
+    36%   { left:-200%; }
+    37.5% { left:-300%; }
+    48.5% { left:-300%; }
+    50%   { left:-400%; }
+    61%   { left:-400%; }
+    62.5% { left:-300%; }
+    73.5% { left:-300%; }
+    75%   { left:-200%; }
+    86%   { left:-200%; }
+    87.5% { left:-100%; }
+    98.5% { left:-100%; }
+    100%  { left:0; }
+} */
+@keyframes carousel{
+    0%    { left:0; }
+    29%   { left:0; }
+    33% { left:-100%; }
+    62% { left:-100%; }
+    66%   { left:-200%; }
+    95%   { left:-200%; }
+    100% { left:-0%; }
+}
+.carousel{
+    width:100%; 
+    overflow:hidden; 
+    height:100%;}
+.paineis{
+    width:500% /* article w * 5 */; 
+    overflow:hidden;  
+    height:100%;  
+    animation:carousel 15s infinite; position:relative;}
+article{
+    float:left; 
+    width:20%;} 
+/* img{
+    height:100%; 
+    width:100%} */
