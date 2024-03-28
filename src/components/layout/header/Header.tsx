@@ -22,14 +22,14 @@ function Header() {
             </form>
             <button onClick={showNav} className={styles.nav_btn}><FiMenu /></button>
             <nav className={`${styles.navigation} ${navStyle}`}>
-                <ul>
+                <ul className={styles.nav_list}>
                     <li><Link to="/">home</Link></li>
                     <li><Link to="/catalog">catalog</Link></li>
                     <li><a href="https://www.linkedin.com/in/beatriz-trivillin/" rel="noreferrer" target="_blank">contact</a></li>
                 </ul>
             </nav>
             <nav className={styles.navigation_desktop}>
-                <ul>
+                <ul className={styles.nav_list}>
                     <li><Link to="/">home</Link></li>
                     <li><Link to="/catalog">catalog</Link></li>
                     <li><a href="https://www.linkedin.com/in/beatriz-trivillin/" rel="noreferrer" target="_blank">contact</a></li>

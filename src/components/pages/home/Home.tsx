@@ -1,8 +1,10 @@
+import Presentation from "./presentation/Presentation";
+
 function Home() {
 
     return (
         <>
-            <h1>Olá</h1>
+            <Presentation/>
         </>
     );
 }
