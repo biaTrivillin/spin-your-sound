@@ -11,6 +11,17 @@ body {
   min-height: 100vh;
 }
 
+::-webkit-scrollbar-track {
+  background-color: var(--ligth-grey-bg);
+}
+::-webkit-scrollbar {
+  width: 10px;
+  background: var(--ligth-grey-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--red-bg);
+}
+
 @media (min-width: 700px) {
   * {
     font-size: 80%;

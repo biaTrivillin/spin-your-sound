@@ -1,0 +1,40 @@
+@import url(../../../../styles/global.css);
+
+.banner_one {
+    background-color: var(--blue-bg);
+}
+.banner_two {
+    background-color: var(--green-bg);
+}
+.banner_three {
+    background-color: var(--light-red-bg);
+}
+.banner {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    width: 100%;
+    height: 9rem;
+}
+.banner h1 {
+   font-size: 1.5rem;
+   padding-bottom: 0.5rem;
+}
+.banner p {
+   font-size: 1rem;
+}
+.banner_two img, .banner_three img{
+    width: 15rem;
+}
+.banner_two img, .banner_three img{
+    width: 15rem;
+    justify-self: flex-start;
+}
+.banner_two img{
+    align-self: flex-end;
+    justify-self: center;
+}
+.banner_one img{
+    height: 9rem;
+    justify-self: center;
+}
