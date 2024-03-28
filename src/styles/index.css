@@ -1,18 +1,23 @@
-@import url(./variables.css);
+@import url(./global.css);;
 
 * {
   font-size: 62.5%;
   color: var(--text-color);
+  font-family: var(--main-font);
 }
 
 body {
   background-color: var(--bg-color);
   min-height: 100vh;
-  font-size: 62.5%;
 }
 
+@media (min-width: 700px) {
+  * {
+    font-size: 80%;
+  }
+}
 @media (min-width: 1000px) {
   * {
-    font-size: 200%;
+    font-size: 110%;
   }
 }
