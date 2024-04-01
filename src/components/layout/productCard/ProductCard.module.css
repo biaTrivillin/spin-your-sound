@@ -1,0 +1,89 @@
+@import url(../../../styles/global.css);
+@import url(../../../styles/animations.css);
+
+.card {
+    background-color: var(--grey-bg);
+    height: 12rem;
+    width: 8rem;
+    margin: 2rem;
+    cursor: pointer;
+}
+.img_container {
+    background-color: var(--light-grey-bg);
+    margin: 1rem;
+    width: calc(100% - 2rem);
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.img_container div {
+    background-color: var(--red-bg);
+    height: calc(100% - 2rem);
+    width: calc(100% - 2rem);
+    position: relative; 
+}
+.img_container div::after {
+    content: "";
+    background-color: var(--red-bg);
+    width: 100%;
+    height: 100%; 
+    position: absolute;
+}
+.show div::before{
+    transform: translateX(35%) rotate(45deg);
+    transition: 1s;
+}
+.hide div::before{
+    transform: translateX(0) rotate(-45deg);
+    transition: 1s;
+}
+.show div{
+    transform: translateX(-15%);
+    transition: 1s;
+}
+.hide div{
+    transform: translateX(0);
+    transition: 1s;
+}
+.img_container div::before {
+    content: "";
+    background-image: url(../../../assets/presentation-record.png);
+    background-size: contain;
+    border-radius: 50%;
+    background-color: #000;
+    position: absolute;
+    width: 98%;
+    height: 98%;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+}
+.text_container {
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.text_container h2{
+    font-size: 0.8rem;
+    font-weight: 800;
+}
+.text_container h3{
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+.text_container h4{
+    font-size: 0.7rem;
+    color: var(--green-bg);
+    font-weight: 800;
+}
+.change_text {
+    color: var(--green-bg);
+    transition: 0.5s;
+}
+.unchange_text {
+    color: var(--text-color);
+    transition: 0.5s;
+}
