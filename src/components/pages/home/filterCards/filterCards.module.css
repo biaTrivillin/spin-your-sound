@@ -2,7 +2,8 @@
 
 .card_container {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 5%;
     padding: 0 var(--padding);
 }
 
@@ -23,10 +24,16 @@
     justify-content: center;
 }
 
-@media (min-width: 1000px) {
+
+@media (min-width: 700px) {
     .card {
         width: 20%;
     }
+    .card h3{
+        font-size: 0.7rem;
+    }
+}
+@media (min-width: 1000px) {
     .card h3{
         font-size: 1rem;
     }

@@ -1,6 +1,7 @@
 import Presentation from "./presentation/Presentation";
 import Banner from "./banner/Banner";
 import FilterCards from "./filterCards/FilterCards";
+import CatalogBanner from "./catalogBanner/CatalogBanner";
 
 function Home() {
 
@@ -9,6 +10,7 @@ function Home() {
             <Presentation/>
             <Banner/>
             <FilterCards/>
+            <CatalogBanner/>
         </>
     );
 }
