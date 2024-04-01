@@ -20,8 +20,8 @@ function Banner() {
                     <div className={`${styles.banner} ${styles.banner_two}`}>
                         <img src={bannerTwoImg}/>
                         <div>
-                            <h1>Discover your beat for much less.</h1>
-                            <p>Incredible daily deals await!</p>
+                            <h1>Your musical taste is top-notch!</h1>
+                            <p>Come savor our latest offerings.</p>
                         </div>
                     </div>
                 </article>
@@ -29,8 +29,8 @@ function Banner() {
                     <div className={`${styles.banner} ${styles.banner_three}`}>
                         <img src={bannerThreeImg}/>
                         <div>
-                            <h1>Your musical taste is top-notch!</h1>
-                            <p>Come savor our latest offerings.</p>
+                            <h1>Discover your beat for much less.</h1>
+                            <p>Incredible daily deals await!</p>
                         </div>
                     </div>
                 </article>
