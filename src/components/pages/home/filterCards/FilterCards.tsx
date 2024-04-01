@@ -28,7 +28,7 @@ function FilterCards() {
         <section className={styles.card_container}>
             {cards.map((item) => (
                 <div className={styles.card} key={item.id}>
-                    <Link to="/">
+                    <Link to="/catalog">
                         <img src={item.img}/>
                         <h3>{item.title}</h3>
                     </Link>

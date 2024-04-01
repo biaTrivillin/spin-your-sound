@@ -2,23 +2,32 @@
 
 .card_container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     padding: 0 var(--padding);
 }
 
 .card {
     width: 30%;
     cursor: pointer;
+    background-color: var(--grey-bg);
 }
 .card img {
     width: 100%;
 }
 .card h3 {
-    background-color: var(--grey-bg);
     text-align: center;
     padding: 10%;
     height: 1.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+@media (min-width: 1000px) {
+    .card {
+        width: 20%;
+    }
+    .card h3{
+        font-size: 1rem;
+    }
 }

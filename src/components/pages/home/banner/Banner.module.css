@@ -56,3 +56,23 @@ article{
     float: left; 
     width: 20%;
 } 
+
+@media (min-width: 1000px) {
+    .banner {
+        height: 13rem;
+    }
+    .banner_one img {
+        height: 13rem;
+    }
+    .banner_two img, .banner_three img{
+        width: 23rem;
+    }
+    .banner h1 {
+        font-size: 2.3rem;
+        padding-right: 2rem;
+    }
+     .banner p {
+        font-size: 1.8rem;
+        padding-right: 2rem;
+    }
+}
