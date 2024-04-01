@@ -1,5 +1,6 @@
 import Presentation from "./presentation/Presentation";
 import Banner from "./banner/Banner";
+import FilterCards from "./filterCards/FilterCards";
 
 function Home() {
 
@@ -7,6 +8,7 @@ function Home() {
         <>
             <Presentation/>
             <Banner/>
+            <FilterCards/>
         </>
     );
 }

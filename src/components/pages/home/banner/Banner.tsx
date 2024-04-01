@@ -2,7 +2,6 @@ import bannerOneImg from "../../../../assets/banner-one.png";
 import bannerTwoImg from "../../../../assets/banner-two.png";
 import bannerThreeImg from "../../../../assets/banner-three.png";
 import styles from "./Banner.module.css";
-// import "./bbbb.css";
 
 function Banner() {
     return(
