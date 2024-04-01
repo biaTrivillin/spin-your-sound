@@ -1,9 +1,9 @@
 import bannerOneImg from "../../../../assets/banner-one.png";
 import bannerTwoImg from "../../../../assets/banner-two.png";
 import bannerThreeImg from "../../../../assets/banner-three.png";
-import styles from "./Banner.module.css";
+import styles from "./BannerCarousel.module.css";
 
-function Banner() {
+function BannerCarousel() {
     return(
         <section className={styles.carousel}>
             <div className={styles.banners_container}>
@@ -39,4 +39,4 @@ function Banner() {
     );
 }
 
-export default Banner;
+export default BannerCarousel;

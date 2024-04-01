@@ -1,0 +1,50 @@
+@import url(../../../styles/global.css);
+
+.footer {
+    background-color: var(--grey-bg);
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 2rem 1rem 1rem 1rem;
+    /* margin-top: 4rem; */
+}
+.footer h3{
+    font-weight: 800;
+    font-size: 0.9rem;
+}
+.footer ul{
+    list-style: none;
+    text-align: center;
+}
+.footer li, .footer p{
+    font-size: 0.7rem;
+}
+.footer li {
+    padding-bottom: 0.2rem;
+}
+.footer a{
+    position: relative;
+    width: 0.5rem;
+    height: 0.5rem;
+}
+.footer svg{
+    font-size: 0.8rem;
+    fill: var(--text-color);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.footer_icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    gap: 0.5rem;
+}
