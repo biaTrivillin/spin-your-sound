@@ -1,0 +1,14 @@
+.banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 2rem;
+}
+.banner h1 {
+    font-size: 1.3rem;
+}
+.card_container {
+    display: flex;
+    gap: 2rem;
+}
