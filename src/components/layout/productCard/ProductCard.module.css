@@ -5,7 +5,6 @@
     background-color: var(--grey-bg);
     height: 12rem;
     width: 8rem;
-    /* margin: 2rem; */
     cursor: pointer;
 }
 .img_container {
@@ -86,4 +85,10 @@
 .unchange_text {
     color: var(--text-color);
     transition: 0.5s;
+}
+
+@media (min-width: 1000px) {
+    .card {
+        transform: scale(1.3);
+    }
 }
