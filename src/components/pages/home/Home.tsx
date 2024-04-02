@@ -3,6 +3,7 @@ import BannerCarousel from "./bannerCarousel/BannerCarousel";
 import FilterCards from "./filterCards/FilterCards";
 import CatalogBanner from "./catalogBanner/CatalogBanner";
 import ProductCard from "../../layout/productCard/ProductCard";
+import BenefitsBanner from "./benefitsBanner/BenefitsBanner";
 
 function Home() {
 
@@ -13,6 +14,7 @@ function Home() {
             <FilterCards/>
             <CatalogBanner/>
             <ProductCard/>
+            <BenefitsBanner/>
         </>
     );
 }
