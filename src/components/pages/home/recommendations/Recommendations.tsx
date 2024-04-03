@@ -15,31 +15,6 @@ function Recommendations() {
     const url = "http://localhost:3000/";
 
     const filteredData: Record[] = [];
-
-    // async function getAllRecords () {
-    //     const response = await fetch(url);
-
-    //     const data: Record[] = await response.json();
-
-
-    //     // console.log(data);
-
-
-
-    //     for (let i = 0; i < numbers.length; i++) {
-
-    //         filteredData.push(data.filter((item) => item.id == numbers[i])[0]);
-            
-
-    //         // setData(filteredData)
-                            
-    //     }
-                                
-        
-    //     // console.log(filteredData);
-
-        
-    // }
   
     const numbers: number[] = [];
 
@@ -54,24 +29,26 @@ function Recommendations() {
         } else i--;
     }
 
-    
-
-
     useEffect(() => {
-        // getAllRecords();
         axios.get(url)
             .then(response => setData(response.data));
+
+        console.log(numbers);
+        console.log(data);
 
     }, []);
 
     useEffect(() => {
+
         for (let i = 0; i < numbers.length; i++) {
 
-            filteredData.push(data.filter((item) => item.id == numbers[i])[0]);
+            // setCardsData(data.filter((item) => item.id === numbers[i]));
+            filteredData.push(data.filter((item: Record) => item.id == numbers[i])[0]);
                                     
         }
+
+        // filteredData.push(data.filter((item) => item.id == 1));
                                         
-                
         console.log(cardsData);
         setCardsData(filteredData);
 
@@ -127,7 +104,7 @@ function Recommendations() {
     return(
         <section className={styles.banner}>
             <h1>RECOMMENDATIONS</h1>
-            {/* <h1>{JSON.stringify(cardsData)}</h1> */}
+            <h1>{JSON.stringify(cardsData)}</h1>
             <div className={styles.card_container}>
                 {/* <ProductCard/> */}
                 {gagagag.map((item) => (
