@@ -1,43 +1,45 @@
 // import { useSetRecoilState } from "recoil";
+import axios from "axios";
 import ProductCard from "../../../layout/productCard/ProductCard";
 import styles from "./Recommendations.module.css";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 // import style from "../../../layout/productCard/ProductCard.module.css";
 // import { cardList } from "../../../../state/atom";
+import { useNavigate } from "react-router-dom";
 
 function Recommendations() {
 
-    // const [data, setData] = useState<Record[]>([]);
-    // const [cardsData, setCardsData] = useState<Record[]>([]);
+    const [data, setData] = useState<Record[]>([]);
+    const [cardsData, setCardsData] = useState<Record[]>([]);
 
     const url = "http://localhost:3000/";
 
     const filteredData: Record[] = [];
 
-    async function getAllRecords () {
-        const response = await fetch(url);
+    // async function getAllRecords () {
+    //     const response = await fetch(url);
 
-        const data: Record[] = await response.json();
-
-
-        console.log(data);
+    //     const data: Record[] = await response.json();
 
 
+    //     // console.log(data);
 
-        for (let i = 0; i < numbers.length; i++) {
 
-            filteredData.push(data.filter((item) => item.id == numbers[i])[0]);
+
+    //     for (let i = 0; i < numbers.length; i++) {
+
+    //         filteredData.push(data.filter((item) => item.id == numbers[i])[0]);
             
 
-            // setData(filteredData)
+    //         // setData(filteredData)
                             
-        }
+    //     }
                                 
         
-        console.log(filteredData);
+    //     // console.log(filteredData);
 
         
-    }
+    // }
   
     const numbers: number[] = [];
 
@@ -52,10 +54,28 @@ function Recommendations() {
         } else i--;
     }
 
+    
+
 
     useEffect(() => {
-        getAllRecords();
+        // getAllRecords();
+        axios.get(url)
+            .then(response => setData(response.data));
+
     }, []);
+
+    useEffect(() => {
+        for (let i = 0; i < numbers.length; i++) {
+
+            filteredData.push(data.filter((item) => item.id == numbers[i])[0]);
+                                    
+        }
+                                        
+                
+        console.log(cardsData);
+        setCardsData(filteredData);
+
+    }, [data]);
 
     
 
@@ -95,14 +115,25 @@ function Recommendations() {
         }
     ];
 
+    const navigate = useNavigate();
+
+    const redirectToProduct = (id: number) => {
+        navigate(`/product/${id}`);
+        location.reload();
+    };
+
+
 
     return(
         <section className={styles.banner}>
             <h1>RECOMMENDATIONS</h1>
+            {/* <h1>{JSON.stringify(cardsData)}</h1> */}
             <div className={styles.card_container}>
                 {/* <ProductCard/> */}
                 {gagagag.map((item) => (
-                    <ProductCard key={item.id} title={item.title} artist={item.artist} price={item.price_usd}/>
+                    <div key={item.id} onClick={() => redirectToProduct(item.id)}>
+                        <ProductCard title={item.title} artist={item.artist} price={item.price_usd}/>
+                    </div>
                 ))}
             </div>
         </section>

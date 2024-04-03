@@ -12,7 +12,7 @@ export default function MainRoutes() {
             <Routes>
                 <Route path="/" element={<Home/>}/>
                 <Route path="/catalog" element={<Catalog/>}/>
-                <Route path="/product" element={<ProductPage/>}/>
+                <Route path="/product/:id" element={<ProductPage/>}/>
             </Routes>
             <Footer/>
         </BrowserRouter>

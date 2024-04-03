@@ -18,7 +18,6 @@ function ProductCard (props: Props) {
         setTextStyle(styles.unchange_text);
     };
 
-
     return (
         <article onMouseOver={showRecord} onMouseLeave={hideRecord} className={styles.card}>
             <div className={`${styles.img_container} ${showRecordStyle}`}>
