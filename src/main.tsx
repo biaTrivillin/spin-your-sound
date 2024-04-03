@@ -1,12 +1,14 @@
-import React from "react";
+// import React from "react";
 import ReactDOM from "react-dom/client";
 import "./styles/index.css";
 import "./styles/reset.css";
 import MainRoutes from "./routes";
-
+import { RecoilRoot } from "recoil";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
-    <React.StrictMode>
+    // <React.StrictMode>
+    <RecoilRoot>
         <MainRoutes/>
-    </React.StrictMode>,
+    </RecoilRoot>
+    // </React.StrictMode>,
 );

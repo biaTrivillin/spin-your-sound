@@ -64,6 +64,23 @@
     }
 }
 
+@keyframes show-record {
+    0% {
+        transform: translateX(0) rotate(0);
+    }
+    100% {
+        transform: translateX(30%) rotate(45deg);
+    }
+}
+@keyframes slide-record {
+    0% {
+        transform: translateX(0) rotate(0);
+    }
+    100% {
+        transform: translateX(-15%);
+    }
+}
+
 @keyframes carousel{
     0%    { left:0; }
     29%   { left:0; }
