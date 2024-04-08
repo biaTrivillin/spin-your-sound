@@ -10,11 +10,11 @@ import { useNavigate } from "react-router-dom";
 function Recommendations() {
 
     const [data, setData] = useState<Record[]>([]);
-    const [cardsData, setCardsData] = useState<Record[]>([]);
+    // const [cardsData, setCardsData] = useState<Record[]>([]);
 
-    const url = "http://localhost:3000/";
+    // const url = "http://localhost:3000/";
 
-    const filteredData: Record[] = [];
+    // const filteredData: Record[] = [];
   
     const numbers: number[] = [];
 
@@ -30,29 +30,42 @@ function Recommendations() {
     }
 
     useEffect(() => {
-        axios.get(url)
-            .then(response => setData(response.data));
-
-        console.log(numbers);
-        console.log(data);
-
-    }, []);
-
-    useEffect(() => {
 
         for (let i = 0; i < numbers.length; i++) {
+            axios.get(`http://localhost:3000/findById?id=${numbers[i]}`)
+                .then(response => setData(response.data));
 
-            // setCardsData(data.filter((item) => item.id === numbers[i]));
-            filteredData.push(data.filter((item: Record) => item.id == numbers[i])[0]);
-                                    
+            // filteredData.push(data);
+
+            console.log(numbers);
+            console.log(data);
         }
 
-        // filteredData.push(data.filter((item) => item.id == 1));
-                                        
-        console.log(cardsData);
-        setCardsData(filteredData);
+    }, []);
+    // useEffect(() => {
+    //     axios.get(url)
+    //         .then(response => setData(response.data));
 
-    }, [data]);
+    //     console.log(numbers);
+    //     console.log(data);
+
+    // }, []);
+
+    // useEffect(() => {
+
+    //     for (let i = 0; i < numbers.length; i++) {
+
+    //         // setCardsData(data.filter((item) => item.id === numbers[i]));
+    //         filteredData.push(data.filter((item: Record) => item.id == numbers[i])[0]);
+                                    
+    //     }
+
+    //     // filteredData.push(data.filter((item) => item.id == 1));
+                                        
+    //     console.log(cardsData);
+    //     setCardsData(filteredData);
+
+    // }, [data]);
 
     
 
@@ -104,7 +117,7 @@ function Recommendations() {
     return(
         <section className={styles.banner}>
             <h1>RECOMMENDATIONS</h1>
-            <h1>{JSON.stringify(cardsData)}</h1>
+            {/* <h1>{JSON.stringify(data)}</h1> */}
             <div className={styles.card_container}>
                 {/* <ProductCard/> */}
                 {gagagag.map((item) => (

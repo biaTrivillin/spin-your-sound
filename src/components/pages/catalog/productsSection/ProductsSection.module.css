@@ -1,0 +1,12 @@
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+@media (min-width: 1000px) {
+    .products{
+        gap: 5rem;
+    }
+}
